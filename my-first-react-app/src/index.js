@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
+import App from './App.js';
 // import reportWebVitals from './reportWebVitals';
 
 // class Background extends React.Component {
@@ -12,66 +13,9 @@ import './App.css';
 //   }
 // }
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
-  }
-
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      date: new Date(),
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <div className='App'>
-          <header className='App-header'>
-            <h1>Hello, World!</h1>
-            <h2>It is {this.state.date.toLocaleTimeString()}</h2>
-            <Toggle />
-          </header>
-        </div>
-      </div>
-    );
-  }
-}
-
-class Toggle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isToggleOn: true };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn,
-    }));
-  }
-
-  render() {
-    return (
-      <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
-      </button>
-    );
-  }
-}
-
 ReactDOM.render(
   <div>
-    <Clock />
+    <App />
   </div>,
   document.getElementById('root')
 );
