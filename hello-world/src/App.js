@@ -1,11 +1,11 @@
 import './App.css';
-import FragmentDemo from './components/FragmentDemo';
+import ParentComp from './components/ParentComp';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <FragmentDemo />
+        <ParentComp />
       </header>
     </div>
   );
