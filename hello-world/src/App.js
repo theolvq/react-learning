@@ -1,15 +1,11 @@
 import './App.css';
-import Inline from './components/Inline';
-import Stylesheet from './components/Stylesheet';
-import './appStyles.css';
-import styles from './appStyles.module.css';
-import Form from './components/Form';
+import FragmentDemo from './components/FragmentDemo';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Form />
+        <FragmentDemo />
       </header>
     </div>
   );
