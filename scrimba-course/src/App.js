@@ -1,15 +1,12 @@
 import './App.css';
 import React from 'react';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer';
+// import ToDoItem from './components/ToDoItem';
+// import ContactCard from './components/ContactCard';
 
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <MainContent />
-      <Footer />
+      <div className='todo-list'></div>
     </div>
   );
 }
