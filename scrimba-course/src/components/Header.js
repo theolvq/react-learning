@@ -4,15 +4,9 @@ function Nav() {
   return (
     <header className='navbar'>
       <ul>
-        <li>
-          <a href='#'>Home</a>
-        </li>
-        <li>
-          <a href='#'>About</a>
-        </li>
-        <li>
-          <a href='#'>Contact</a>
-        </li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
       </ul>
     </header>
   );
