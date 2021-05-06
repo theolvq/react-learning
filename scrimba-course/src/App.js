@@ -1,8 +1,12 @@
 import React from 'react';
-import FormContainer from './components/FormContainer';
+import './styles.css';
 
 function App() {
-  return <FormContainer />;
+  return (
+    <React.Fragment>
+      <h1>Boilerplate</h1>
+    </React.Fragment>
+  );
 }
 
 export default App;
