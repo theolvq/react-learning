@@ -57,5 +57,3 @@ class TodoList extends Component {
     return <div>Code goes here</div>;
   }
 }
-
-export default App;
