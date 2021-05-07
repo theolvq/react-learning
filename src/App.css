@@ -10,7 +10,13 @@
   color: white;
 }
 
-.border {
-  border: 1px solid blue;
-  border-radius: 5px;
+main > h1 {
+  text-align: center;
+}
+
+.callout {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: #c0fffe;
 }
