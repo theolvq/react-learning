@@ -1,15 +1,18 @@
-import './App.css';
-import Favorite from './components/reusability/Favorite';
-import Menu from './components/reusability/Menu';
+import React from 'react';
+import DataFetcher from './components/Reusability/RenderProps/DataFetcher';
 
 function App() {
   return (
     <div>
-      <Menu />
-      <hr />
-      <Favorite />
+      <DataFetcher url='https://swapi.dev/api/people/1/'>
+        {({ data, loading }) =>
+          loading ? <h1>Loading...</h1> : <p>{JSON.stringify(data)}</p>
+        }
+      </DataFetcher>
     </div>
   );
 }
 
 export default App;
+
+// https://swapi.dev/api/people/1/
