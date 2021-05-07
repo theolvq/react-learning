@@ -85,6 +85,7 @@ header > p {
 }
 
 .meme-form > button {
+  cursor: pointer;
   border: none;
   font-family: VT323, monospace;
   font-size: 25px;
