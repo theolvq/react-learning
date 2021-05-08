@@ -1,15 +1,15 @@
 import React from 'react';
 import Button from './components/4.Context/Theme/Button';
 import Header from './components/4.Context/Theme/Header';
-import { ThemeContextConsumer } from './components/4.Context/Theme/themeContext';
+import ThemeContext from './components/4.Context/Theme/themeContext';
 
 function App() {
   return (
     <div>
       <Header />
-      <ThemeContextConsumer>
+      <ThemeContext.Consumer>
         {theme => <Button theme={theme} />}
-      </ThemeContextConsumer>
+      </ThemeContext.Consumer>
       <Button />
       <Button />
     </div>
