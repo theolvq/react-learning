@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
 }
@@ -21,9 +21,9 @@ button {
 .light-theme {
   background-color: whitesmoke;
   color: #333333;
-}
+} */
 
-/* body {
+body {
   margin: 0;
   padding: 0;
 }
@@ -36,4 +36,4 @@ header {
 
 main {
   padding: 20px;
-} */
+}

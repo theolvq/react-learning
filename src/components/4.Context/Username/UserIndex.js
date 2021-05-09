@@ -1,20 +1,13 @@
-import './index.css';
-import './styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import './styles.css';
 import App from './App';
-import UserContext from './components/4.Context/Username/userContext';
-
-/**
- * Challenge: Set up context to save the user's username and pass it to anywhere that is currently hardcoding "Username".
- *
- * Use the static class property `contextType` on any components that need to consume context.
- * https://reactjs.org/docs/context.html
- */
+import { UserContextProvider } from './components/4.Context/Username/userContext';
 
 ReactDOM.render(
-  <UserContext.Provider value={'Lily'}>
+  <UserContextProvider>
     <App />
-  </UserContext.Provider>,
+  </UserContextProvider>,
   document.getElementById('root')
 );

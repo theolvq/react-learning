@@ -1,10 +1,14 @@
 import React from 'react';
-// import UserContext from './userContext';
+import { UserContextConsumer } from './userContext';
 
-const Header = props => (
-  <header>
-    <p>Welcome, {props.username}!</p>
-  </header>
-);
+function Header() {
+  return (
+    <header>
+      <UserContextConsumer>
+        {({ username }) => <p>Welcome, {username}!</p>}
+      </UserContextConsumer>
+    </header>
+  );
+}
 
 export default Header;

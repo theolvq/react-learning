@@ -1,8 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ThemeContextConsumer } from './themeContext';
 
-const Button = props => {
-  return <button className={`${props.theme}-theme`}>Switch Theme</button>;
+const Button = () => {
+  return (
+    <ThemeContextConsumer>
+      {({ theme, toggleTheme }) => (
+        <button onClick={toggleTheme} className={`${theme}-theme`}>
+          Switch Theme
+        </button>
+      )}
+    </ThemeContextConsumer>
+  );
 };
 
 Button.propTypes = {

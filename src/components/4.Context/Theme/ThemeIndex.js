@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './styles.css';
 import App from './App';
-import ThemeContext from './components/4.Context/themeContext';
+import { ThemeContextProvider } from './components/4.Context/Theme/themeContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContext.Provider value={'dark'}>
+    <ThemeContextProvider value={'dark'}>
       <App />
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
