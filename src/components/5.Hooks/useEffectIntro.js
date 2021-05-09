@@ -32,13 +32,3 @@ const App = () => {
 };
 
 export default App;
-
-// useEffect hook is considered a remplacement for 3 lifecycle methods:
-// componentDidMount
-// componentDidUpdate
-// componentWillUnmount
-// Above all it's a hook that allows us to apply side effect:
-// network request,
-// manual DOM manipulation,
-// event listeners,
-// or timeouts and intervals
