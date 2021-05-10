@@ -1,44 +1,14 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import randomcolor from 'randomcolor';
+import React from 'react';
+import Button from './components/4.Context/Theme/Button';
+import Header from './components/4.Context/Theme/Header';
 
-const App = () => {
-  const [count, setCount] = useState(0);
-  const [color, setColor] = useState('');
-
-  const increment = () => setCount(prevCount => prevCount + 1);
-  const decrement = () => setCount(count - 1);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      increment();
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
-    setColor(randomcolor());
-  }, [count]);
-
+function App() {
   return (
-    <div className='App'>
-      <h1 style={{ color: color }}>{count}</h1>
-      <div>
-        <button onClick={increment}>+1</button>
-        <button onClick={decrement}>-1</button>
-      </div>
+    <div>
+      <Header />
+      <Button />
     </div>
   );
-};
+}
 
 export default App;
-
-// useEffect hook is considered a remplacement for 3 lifecycle methods:
-// componentDidMount
-// componentDidUpdate
-// componentWillUnmount
-// Above all it's a hook that allows us to apply side effect:
-// network request,
-// manual DOM manipulation,
-// event listeners,
-// or timeouts and intervals
