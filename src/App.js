@@ -1,27 +1,24 @@
 import React from 'react';
-import './App.css';
-import { Switch, Route, Link } from 'react-router-dom';
-import Home from './components/6.ReactRouter/BasicExample/Home';
-import About from './components/6.ReactRouter/BasicExample/About';
-import Contact from './components/6.ReactRouter/BasicExample/Contact';
+import { Switch, Route } from 'react-router-dom';
+import Header from './components/6.ReactRouter/DynamicNestedRoutes/Header';
+import Home from './components/6.ReactRouter/DynamicNestedRoutes/Home';
+import ServiceDetail from './components/6.ReactRouter/DynamicNestedRoutes/pages/services/ServiceDetail';
+import ServiceList from './components/6.ReactRouter/DynamicNestedRoutes/pages/services/ServiceList';
 
 function App() {
   return (
-    <div className='App'>
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/contact'>Contact</Link>
-      </nav>
+    <div>
+      <Header />
+
       <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route exact path='/about'>
-          <About />
+        <Route exact path='/services'>
+          <ServiceList />
         </Route>
-        <Route exact path='/contact'>
-          <Contact />
+        <Route path='/services/:serviceId'>
+          <ServiceDetail />
         </Route>
       </Switch>
     </div>
