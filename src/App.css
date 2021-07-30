@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+main > h1 {
+  text-align: center;
+}
+
+.callout {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: #c0fffe;
+}
